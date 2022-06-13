@@ -2,5 +2,8 @@
 #include "wx/wx.h"
 class cWindow : public wxFrame
 {
+public:
+	cWindow();
+	~cWindow();
 };
 
