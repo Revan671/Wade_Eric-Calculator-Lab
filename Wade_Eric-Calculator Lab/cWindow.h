@@ -5,7 +5,9 @@ class cWindow : public wxFrame
 public:
 	cWindow();
 	~cWindow();
-public:
+	void OnButtonClick(wxCommandEvent& evt);
+
+private:
 	//numpad
 	wxButton* button0;
 	wxButton* button1;
