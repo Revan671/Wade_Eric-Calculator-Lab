@@ -1,7 +1,28 @@
 #include "cWindow.h"
 
 wxBEGIN_EVENT_TABLE(cWindow, wxFrame)
-
+	EVT_BUTTON(100,cWindow::OnButtonClick)
+	EVT_BUTTON(101, cWindow::OnButtonClick)
+	EVT_BUTTON(102, cWindow::OnButtonClick)
+	EVT_BUTTON(103, cWindow::OnButtonClick)
+	EVT_BUTTON(104, cWindow::OnButtonClick)
+	EVT_BUTTON(105, cWindow::OnButtonClick)
+	EVT_BUTTON(106, cWindow::OnButtonClick)
+	EVT_BUTTON(107, cWindow::OnButtonClick)
+	EVT_BUTTON(108, cWindow::OnButtonClick)
+	EVT_BUTTON(109, cWindow::OnButtonClick)
+	EVT_BUTTON(110, cWindow::OnButtonClick)
+	EVT_BUTTON(111, cWindow::OnButtonClick)
+	EVT_BUTTON(112, cWindow::OnButtonClick)
+	EVT_BUTTON(113, cWindow::OnButtonClick)
+	EVT_BUTTON(114, cWindow::OnButtonClick)
+	EVT_BUTTON(115, cWindow::OnButtonClick)
+	EVT_BUTTON(116, cWindow::OnButtonClick)
+	EVT_BUTTON(117, cWindow::OnButtonClick)
+	EVT_BUTTON(118, cWindow::OnButtonClick)
+	EVT_BUTTON(119, cWindow::OnButtonClick)
+	EVT_BUTTON(120, cWindow::OnButtonClick)
+	EVT_BUTTON(121, cWindow::OnButtonClick)
 wxEND_EVENT_TABLE()
 
 cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), wxSize(385,385))
@@ -38,7 +59,56 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), 
 
 void cWindow::OnButtonClick(wxCommandEvent& evt) 
 {
+	std::string output;
+	int id = evt.GetId();
+	
+	if(id < 110)
+	{
+		int val = id - 100;
+		output = std::to_string(val);
+		
+	}else
+		switch (id) 
+		{
+			case 110:
+				output = "+";
+				break;
+			case 111:
+				output = "-";
+				break;
+			case 112:
+				output = "x";
+				break;
+			case 113:
+				output = "\u00F7";
+				break;
+			case 114:
+				output = "=";
+				break;
+			case 115:
+				output = "C";
+				break;
+			case 116:
+				output = "MOD";
+				break;
+			case 117:
+				output = "BIN";
+				break;
+			case 118:
+				output = "HEX";
+				break;
+			case 119:
+				output = "DEC";
+				break;
+			case 120:
+				output = "+/-";
+				break;
+			case 121:
+				output = "DEL";
+				break;
+		}
 
+	outputBox->AppendText(output);
 }
 
 cWindow::~cWindow() {
