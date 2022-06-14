@@ -1,5 +1,9 @@
 #include "cWindow.h"
 
+wxBEGIN_EVENT_TABLE(cWindow, wxFrame)
+
+wxEND_EVENT_TABLE()
+
 cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), wxSize(385,385))
 {
 	//numpad
@@ -29,6 +33,11 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), 
 	//textboxes
 	inputBox = new wxTextCtrl(this, 122, "", wxPoint(150,80), wxSize(210,50));
 	outputBox = new wxTextCtrl(this, 123, "", wxPoint(10, 10), wxSize(350, 70));
+
+}
+
+void cWindow::OnButtonClick(wxCommandEvent& evt) 
+{
 
 }
 
