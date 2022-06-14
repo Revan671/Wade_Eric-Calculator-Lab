@@ -29,6 +29,7 @@ public:
 	wxButton* button18; // hex
 	wxButton* button19; // decimal
 	wxButton* button20; // +/-
+	wxButton* button21; // DEL
 	//IO
 	wxTextCtrl* outputBox;
 	wxTextCtrl* inputBox;
