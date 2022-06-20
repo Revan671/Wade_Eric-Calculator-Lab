@@ -1,6 +1,10 @@
 #include "cWindow.h"
 
-cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), wxSize(385,385))
+wxBEGIN_EVENT_TABLE(cWindow, wxFrame)
+EVT_BUTTON(wxID_ANY, cWindow::OnButtonClick)
+wxEND_EVENT_TABLE()
+
+cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200), wxSize(385, 385))
 {
 	//numpad
 	button7 = new wxButton(this, 107, "7", wxPoint(10, 130), wxSize(70, 50));
@@ -14,7 +18,7 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), 
 	button3 = new wxButton(this, 109, "3", wxPoint(150, 230), wxSize(70, 50));
 	button0 = new wxButton(this, 100, "0", wxPoint(80, 280), wxSize(70, 50));
 	//controls
-	button20 = new wxButton(this, 120, "+/-", wxPoint(10, 280), wxSize(70, 50));	
+	button20 = new wxButton(this, 120, "+/-", wxPoint(10, 280), wxSize(70, 50));
 	button19 = new wxButton(this, 119, "DEC", wxPoint(150, 280), wxSize(70, 50));
 	button10 = new wxButton(this, 110, "+", wxPoint(220, 130), wxSize(70, 50));
 	button11 = new wxButton(this, 111, "-", wxPoint(290, 130), wxSize(70, 50));
@@ -27,60 +31,63 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), 
 	button15 = new wxButton(this, 115, "C", wxPoint(10, 80), wxSize(70, 50));
 	button21 = new wxButton(this, 121, "DEL", wxPoint(80, 80), wxSize(70, 50));
 	//textboxes
-	inputBox = new wxTextCtrl(this, 122, "", wxPoint(150,80), wxSize(210,50));
+	inputBox = new wxTextCtrl(this, 122, "", wxPoint(150, 80), wxSize(210, 50));
 	outputBox = new wxTextCtrl(this, 123, "", wxPoint(10, 10), wxSize(350, 70));
 
 }
 
-void cWindow::OnButtonClick(wxCommandEvent& evt) 
+void cWindow::OnButtonClick(wxCommandEvent& evt)
 {
 	std::string output;
 	int id = evt.GetId();
 
-	if(id < 110)
+	//wxButton tempButton
+
+	if (id < 110)
 	{
 		int val = id - 100;
 		output = std::to_string(val);
-		
-	}else
-		switch (id) 
+
+	}
+	else
+		switch (id)
 		{
-			case 110:
-				output = "+";
-				break;
-			case 111:
-				output = "-";
-				break;
-			case 112:
-				output = "x";
-				break;
-			case 113:
-				output = "\u00F7";
-				break;
-			case 114:
-				output = "=";
-				break;
-			case 115:
-				outputBox->Clear();
-				break;
-			case 116:
-				output = "MOD";
-				break;
-			case 117:
-				output = "BIN";
-				break;
-			case 118:
-				output = "HEX";
-				break;
-			case 119:
-				output = "DEC";
-				break;
-			case 120:
-				output = "+/-";
-				break;
-			case 121:
-				output = "DEL";
-				break;
+		case 110:
+			output = "+";
+			break;
+		case 111:
+			output = "-";
+			break;
+		case 112:
+			output = "x";
+			break;
+		case 113:
+			output = "\u00F7";
+			break;
+		case 114:
+			output = "=";
+			break;
+		case 115:
+			outputBox->Clear();
+			break;
+		case 116:
+			output = "MOD";
+			break;
+		case 117:
+			output = "BIN";
+			break;
+		case 118:
+			output = "HEX";
+			break;
+		case 119:
+			output = "DEC";
+			break;
+		case 120:
+			output = "+/-";
+			break;
+		case 121:
+			output = "DEL";
+			break;
 		}
 
 	outputBox->AppendText(output);

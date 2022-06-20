@@ -6,7 +6,9 @@ public:
 	cWindow();
 	~cWindow();
 	void OnButtonClick(wxCommandEvent& evt);
-public:
+	wxDECLARE_EVENT_TABLE();
+
+private:
 	//numpad
 	wxButton* button0;
 	wxButton* button1;
@@ -36,4 +38,3 @@ public:
 	wxTextCtrl* inputBox;
 
 };
-
