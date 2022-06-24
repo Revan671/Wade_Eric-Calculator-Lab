@@ -34,8 +34,8 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200),
 	button19 = new wxButton(this, 119, "DEC", wxPoint(150, 280), wxSize(70, 50));
 	button10 = Factory->CreateAddButton(this);
 	button11 = Factory->CreateSubtractButton(this);
-	button12 = new wxButton(this, 112, "x", wxPoint(220, 180), wxSize(70, 50));
-	button13 = new wxButton(this, 113, "\u00F7", wxPoint(290, 180), wxSize(70, 50));
+	button12 = Factory->CreateMultiplicationButton(this);
+	button13 = Factory->CreateDivisionButton(this);
 	button16 = new wxButton(this, 116, "MOD", wxPoint(220, 230), wxSize(70, 50));
 	button17 = new wxButton(this, 117, "BIN", wxPoint(290, 230), wxSize(70, 50));
 	button18 = new wxButton(this, 118, "HEX", wxPoint(220, 280), wxSize(70, 50));

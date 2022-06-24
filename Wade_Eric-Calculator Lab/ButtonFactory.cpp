@@ -24,11 +24,13 @@ wxButton* ButtonFactory::CreateSubtractButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateMultiplicationButton(wxWindow* frame) {
-
+	wxButton* multiplicationButton = new wxButton(frame, 112, "x", wxPoint(220, 180), wxSize(70, 50));
+	return multiplicationButton;
 }
 
 wxButton* ButtonFactory::CreateDivisionButton(wxWindow* frame) {
-
+	wxButton* divisionButton = new wxButton(frame, 113, "\u00F7", wxPoint(290, 180), wxSize(70, 50));
+	return divisionButton;
 }
 
 wxButton* ButtonFactory::CreateEqualsButton(wxWindow* frame) {
