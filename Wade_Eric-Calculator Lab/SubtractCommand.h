@@ -11,13 +11,13 @@ public:
 		mNum2 = num2;
 	}
 
-	SubtractNumbers() {
+	int SubtractNumbers() {
 		int result = mNum1 - mNum2;
 		return result;
 	}
 
-	void Execute() {
-		SubtractNumbers();
+	int Execute() {
+		return SubtractNumbers();
 	}
 };
 

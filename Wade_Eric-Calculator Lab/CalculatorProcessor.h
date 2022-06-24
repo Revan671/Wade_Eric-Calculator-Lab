@@ -3,7 +3,8 @@
 #include <vector>
 #include "IBaseCommand.h"
 
-class CalculatorProcessor : public IBaseCommand
+
+class CalculatorProcessor 
 {
 private:
 	CalculatorProcessor() {}
@@ -25,7 +26,7 @@ public:
 	//std::string GetMultiplication(int multNum);
 	std::string GetDivision(int divNum);
 	std::string GetModulus(int modNum);
-	void Execute();
+
 };
 
 CalculatorProcessor* CalculatorProcessor::_processor = nullptr;

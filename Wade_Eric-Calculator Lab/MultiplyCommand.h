@@ -16,8 +16,8 @@ public:
 		return results;
 	}
 
-	void Execute() {
-		MultiplyNumbers();
+	int Execute() {
+		return MultiplyNumbers();
 	}
 };
 

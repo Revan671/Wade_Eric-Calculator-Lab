@@ -96,7 +96,3 @@ std::string CalculatorProcessor::GetModulus(int modNum) {
 	std::string results = std::to_string(baseNumber % modNum);
 	return results;
 }
-
-void CalculatorProcessor::Execute() {
-
-}
