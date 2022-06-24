@@ -59,11 +59,13 @@ wxButton* ButtonFactory::CreateHEXButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateDECIButton(wxWindow* frame) {
-
+	wxButton* deciButton = new wxButton(frame, 119, "DEC", wxPoint(150, 280), wxSize(70, 50));
+	return deciButton;
 }
 
 wxButton* ButtonFactory::CreateSignButton(wxWindow* frame) {
-
+	wxButton* signButton = new wxButton(frame, 119, "DEC", wxPoint(150, 280), wxSize(70, 50));
+	return signButton;
 }
 
 wxButton* ButtonFactory::CreateDeleteButton(wxWindow* frame) {

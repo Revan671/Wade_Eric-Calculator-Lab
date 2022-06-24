@@ -30,8 +30,8 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200),
 	//button0 = new wxButton(this, 100, "0", wxPoint(80, 280), wxSize(70, 50));
 	button0 = Factory->CreateNumpadButton(0, this, 80, 280);
 	//controls
-	button20 = new wxButton(this, 120, "+/-", wxPoint(10, 280), wxSize(70, 50));
-	button19 = new wxButton(this, 119, "DEC", wxPoint(150, 280), wxSize(70, 50));
+	button20 = Factory->CreateSignButton(this);
+	button19 = Factory->CreateDECIButton(this);
 	button10 = Factory->CreateAddButton(this);
 	button11 = Factory->CreateSubtractButton(this);
 	button12 = Factory->CreateMultiplicationButton(this);
