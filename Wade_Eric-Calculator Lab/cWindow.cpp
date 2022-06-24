@@ -109,3 +109,4 @@ void cWindow::OnButtonClick(wxCommandEvent& evt)
 }
 
 cWindow::~cWindow() {
+}
