@@ -34,7 +34,8 @@ wxButton* ButtonFactory::CreateDivisionButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateEqualsButton(wxWindow* frame) {
-
+	wxButton* equalsButton = new wxButton(frame, 114, "=", wxPoint(290, 280), wxSize(70, 50));
+	return equalsButton;
 }
 
 wxButton* ButtonFactory::CreateClearButton(wxWindow* frame) {
