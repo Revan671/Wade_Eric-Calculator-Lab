@@ -44,7 +44,8 @@ wxButton* ButtonFactory::CreateClearButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateMODButton(wxWindow* frame) {
-
+	wxButton* modButton = new wxButton(frame, 116, "MOD", wxPoint(220, 230), wxSize(70, 50));
+	return modButton;
 }
 
 wxButton* ButtonFactory::CreateBINButton(wxWindow* frame) {
