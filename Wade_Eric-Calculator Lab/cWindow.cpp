@@ -38,7 +38,7 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200),
 	button13 = Factory->CreateDivisionButton(this);
 	button16 = Factory->CreateMODButton(this);
 	button17 = Factory->CreateBINButton(this);
-	button18 = new wxButton(this, 118, "HEX", wxPoint(220, 280), wxSize(70, 50));
+	button18 = Factory->CreateHEXButton(this);
 	button14 = Factory->CreateEqualsButton(this);
 	button15 = Factory->CreateClearButton(this);
 	button21 = new wxButton(this, 121, "DEL", wxPoint(80, 80), wxSize(70, 50));

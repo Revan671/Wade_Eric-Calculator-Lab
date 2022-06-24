@@ -54,7 +54,8 @@ wxButton* ButtonFactory::CreateBINButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateHEXButton(wxWindow* frame) {
-
+	wxButton* hexButton = new wxButton(frame, 118, "HEX", wxPoint(220, 280), wxSize(70, 50));
+	return hexButton;
 }
 
 wxButton* ButtonFactory::CreateDECIButton(wxWindow* frame) {
