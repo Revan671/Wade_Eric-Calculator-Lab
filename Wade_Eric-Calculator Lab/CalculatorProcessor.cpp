@@ -1,5 +1,6 @@
 #include "CalculatorProcessor.h"
 
+
 CalculatorProcessor* CalculatorProcessor::GetInstance() {
 	if (_processor == nullptr) {
 		_processor = new CalculatorProcessor();
@@ -71,11 +72,11 @@ std::string CalculatorProcessor::GetHexadecimal() {
 	results = "0x" + results;
 	return results;
 }
-/*
-std::string CalculatorProcessor::GetAddition(int addNum) {
-	std::string results = std::to_string(baseNumber + addNum);
-	return results;
-}*/
+
+void CalculatorProcessor::GetAddition(int addNum) {
+	AddCommand add = new AddCommand(baseNumber, addNum);
+	commands.push_back(add);
+}
 /*
 std::string CalculatorProcessor::GetSubtraction(int subNum) {
 	std::string results = std::to_string(baseNumber - subNum);

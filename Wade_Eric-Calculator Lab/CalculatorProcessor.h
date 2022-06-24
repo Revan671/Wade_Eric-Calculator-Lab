@@ -2,6 +2,10 @@
 #include <string>
 #include <vector>
 #include "IBaseCommand.h"
+#include "AddCommand.h"
+#include "SubtractCommand.h"
+#include "MultiplyCommand.h"
+#include "DivideCommand.h"
 
 
 class CalculatorProcessor 
@@ -21,7 +25,7 @@ public:
 	std::string GetDecimal();
 	std::string GetHexadecimal();
 	std::string GetBinary();
-	//std::string GetAddition(int addNum);
+	void GetAddition(int addNum);
 	//std::string GetSubtraction(int subNum);
 	//std::string GetMultiplication(int multNum);
 	//std::string GetDivision(int divNum);
