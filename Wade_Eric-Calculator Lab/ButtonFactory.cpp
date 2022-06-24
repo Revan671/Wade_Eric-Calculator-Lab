@@ -1,53 +1,62 @@
 #include "ButtonFactory.h"
 
-wxButton ButtonFactory::CreateNumpadButton(int number) {
+ButtonFactory::ButtonFactory() {
+	idCounter = 100;
+}
+
+ButtonFactory::~ButtonFactory() {
 
 }
 
-wxButton ButtonFactory::CreateAddButton() {
+wxButton ButtonFactory::CreateNumpadButton(int number, wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateSubtractButton() {
+wxButton* ButtonFactory::CreateAddButton(wxWindow* frame) {
+	wxButton* addButton = new wxButton(frame, 110, "+", wxPoint(220, 130), wxSize(70, 50));
+	return addButton;
+}
+
+wxButton ButtonFactory::CreateSubtractButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateMultiplicationButton() {
+wxButton ButtonFactory::CreateMultiplicationButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateDivisionButton() {
+wxButton ButtonFactory::CreateDivisionButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateEqualsButton() {
+wxButton ButtonFactory::CreateEqualsButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateClearButton() {
+wxButton ButtonFactory::CreateClearButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateMODButton() {
+wxButton ButtonFactory::CreateMODButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateBINButton() {
+wxButton ButtonFactory::CreateBINButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateHEXButton() {
+wxButton ButtonFactory::CreateHEXButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateDECIButton() {
+wxButton ButtonFactory::CreateDECIButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateSignButton() {
+wxButton ButtonFactory::CreateSignButton(wxWindow* frame) {
 
 }
 
-wxButton ButtonFactory::CreateDeleteButton() {
+wxButton ButtonFactory::CreateDeleteButton(wxWindow* frame) {
 
 }

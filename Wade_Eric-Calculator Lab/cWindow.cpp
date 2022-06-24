@@ -1,4 +1,5 @@
 #include "cWindow.h"
+#include "ButtonFactory.h"
 
 wxBEGIN_EVENT_TABLE(cWindow, wxFrame)
 EVT_BUTTON(wxID_ANY, cWindow::OnButtonClick)
@@ -6,6 +7,7 @@ wxEND_EVENT_TABLE()
 
 cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200), wxSize(385, 385))
 {
+	ButtonFactory* Factory = new ButtonFactory();
 	//numpad
 	button7 = new wxButton(this, 107, "7", wxPoint(10, 130), wxSize(70, 50));
 	button8 = new wxButton(this, 108, "8", wxPoint(80, 130), wxSize(70, 50));
@@ -20,7 +22,7 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200),
 	//controls
 	button20 = new wxButton(this, 120, "+/-", wxPoint(10, 280), wxSize(70, 50));
 	button19 = new wxButton(this, 119, "DEC", wxPoint(150, 280), wxSize(70, 50));
-	button10 = new wxButton(this, 110, "+", wxPoint(220, 130), wxSize(70, 50));
+	button10 = Factory->CreateAddButton(this);
 	button11 = new wxButton(this, 111, "-", wxPoint(290, 130), wxSize(70, 50));
 	button12 = new wxButton(this, 112, "x", wxPoint(220, 180), wxSize(70, 50));
 	button13 = new wxButton(this, 113, "\u00F7", wxPoint(290, 180), wxSize(70, 50));
