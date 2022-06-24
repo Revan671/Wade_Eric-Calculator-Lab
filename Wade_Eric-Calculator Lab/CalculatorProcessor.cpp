@@ -11,3 +11,10 @@ void CalculatorProcessor::SetBaseNumber(int number) {
 	baseNumber = number;
 }
 
+std::string CalculatorProcessor::GetDecimal() {
+	return std::to_string(baseNumber);
+}
+
+std::string CalculatorProcessor::GetBinary() {
+
+}
