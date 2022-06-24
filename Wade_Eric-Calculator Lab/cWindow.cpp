@@ -2,10 +2,12 @@
 #include "ButtonFactory.h"
 
 wxBEGIN_EVENT_TABLE(cWindow, wxFrame)
-EVT_BUTTON(wxID_ANY, cWindow::OnButtonClick)
+
+	EVT_BUTTON(wxID_ANY, cWindow::OnButtonClick)
 wxEND_EVENT_TABLE()
 
-cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200), wxSize(385, 385))
+cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400,200), wxSize(385,385))
+
 {
 	ButtonFactory* Factory = new ButtonFactory();
 	//numpad
@@ -48,58 +50,58 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200),
 
 }
 
-void cWindow::OnButtonClick(wxCommandEvent& evt)
+void cWindow::OnButtonClick(wxCommandEvent& evt) 
 {
 	std::string output;
 	int id = evt.GetId();
-
+	
 	//wxButton tempButton
 
-	if (id < 110)
+	if(id < 110)
 	{
 		int val = id - 100;
 		output = std::to_string(val);
-
-	}
-	else
-		switch (id)
+		
+	}else
+		switch (id) 
 		{
-		case 110:
-			output = "+";
-			break;
-		case 111:
-			output = "-";
-			break;
-		case 112:
-			output = "x";
-			break;
-		case 113:
-			output = "\u00F7";
-			break;
-		case 114:
-			output = "=";
-			break;
-		case 115:
-			outputBox->Clear();
-			break;
-		case 116:
-			output = "MOD";
-			break;
-		case 117:
-			output = "BIN";
-			break;
-		case 118:
-			output = "HEX";
-			break;
-		case 119:
-			output = "DEC";
-			break;
-		case 120:
-			output = "+/-";
-			break;
-		case 121:
-			output = "DEL";
-			break;
+			case 110:
+				output = "+";
+				break;
+			case 111:
+				output = "-";
+				break;
+			case 112:
+				output = "x";
+				break;
+			case 113:
+				output = "\u00F7";
+				break;
+			case 114:
+				output = "=";
+				break;
+			case 115:
+				outputBox->Clear();
+				break;
+			case 116:
+				output = "MOD";
+				break;
+			case 117:
+				output = "BIN";
+				break;
+			case 118:
+				output = "HEX";
+				break;
+			case 119:
+				output = "DEC";
+				break;
+			case 120:
+				output = "+/-";
+				break;
+			case 121:
+				output = "DEL";
+				break;
+
 		}
 
 	outputBox->AppendText(output);
