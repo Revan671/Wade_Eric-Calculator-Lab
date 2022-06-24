@@ -5,7 +5,10 @@ class cWindow : public wxFrame
 public:
 	cWindow();
 	~cWindow();
-public:
+	void OnButtonClick(wxCommandEvent& evt);
+	wxDECLARE_EVENT_TABLE();
+
+private:
 	//numpad
 	wxButton* button0;
 	wxButton* button1;
@@ -35,4 +38,3 @@ public:
 	wxTextCtrl* inputBox;
 
 };
-
