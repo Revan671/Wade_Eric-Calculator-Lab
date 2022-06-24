@@ -8,8 +8,9 @@ ButtonFactory::~ButtonFactory() {
 
 }
 
-wxButton* ButtonFactory::CreateNumpadButton(int number, wxWindow* frame) {
-
+wxButton* ButtonFactory::CreateNumpadButton(int number, wxWindow* frame, int x, int y) {
+	wxButton* numpadButton = new wxButton(frame, idCounter + number, std::to_string(number), wxPoint(x, y), wxSize(70, 50));
+	return numpadButton;
 }
 
 wxButton* ButtonFactory::CreateAddButton(wxWindow* frame) {

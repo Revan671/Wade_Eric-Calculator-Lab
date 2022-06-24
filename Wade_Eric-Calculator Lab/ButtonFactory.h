@@ -8,7 +8,7 @@ private:
 public:
 	ButtonFactory();
 	~ButtonFactory();
-	wxButton* CreateNumpadButton(int number, wxWindow* frame);
+	wxButton* CreateNumpadButton(int number, wxWindow* frame, int x, int y);
 	wxButton* CreateAddButton(wxWindow* frame);
 	wxButton* CreateSubtractButton(wxWindow* frame);
 	wxButton* CreateMultiplicationButton(wxWindow* frame);
