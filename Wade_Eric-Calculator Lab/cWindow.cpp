@@ -40,7 +40,7 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200),
 	button17 = new wxButton(this, 117, "BIN", wxPoint(290, 230), wxSize(70, 50));
 	button18 = new wxButton(this, 118, "HEX", wxPoint(220, 280), wxSize(70, 50));
 	button14 = Factory->CreateEqualsButton(this);
-	button15 = new wxButton(this, 115, "C", wxPoint(10, 80), wxSize(70, 50));
+	button15 = Factory->CreateClearButton(this);
 	button21 = new wxButton(this, 121, "DEL", wxPoint(80, 80), wxSize(70, 50));
 	//textboxes
 	inputBox = new wxTextCtrl(this, 122, "", wxPoint(150, 80), wxSize(210, 50));

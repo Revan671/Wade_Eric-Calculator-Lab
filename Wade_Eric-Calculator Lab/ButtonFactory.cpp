@@ -39,7 +39,8 @@ wxButton* ButtonFactory::CreateEqualsButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateClearButton(wxWindow* frame) {
-
+	wxButton* clearButton = new wxButton(frame, 115, "C", wxPoint(10, 80), wxSize(70, 50));
+	return clearButton;
 }
 
 wxButton* ButtonFactory::CreateMODButton(wxWindow* frame) {
