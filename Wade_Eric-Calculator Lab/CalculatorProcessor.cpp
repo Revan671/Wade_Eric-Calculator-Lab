@@ -16,5 +16,18 @@ std::string CalculatorProcessor::GetDecimal() {
 }
 
 std::string CalculatorProcessor::GetBinary() {
+	std::string results = "";
+	int number = baseNumber;
 
+	for (int i = 0; i < 32; i++) {		
+		if (number % 2 == 0) {
+			results = "0" + results;
+		}
+		else {
+			results = "1" + results;
+		}
+		number = number / 2;
+	}
+
+	return results;
 }
