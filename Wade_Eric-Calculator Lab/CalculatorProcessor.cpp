@@ -31,3 +31,43 @@ std::string CalculatorProcessor::GetBinary() {
 
 	return results;
 }
+
+std::string CalculatorProcessor::GetHexadecimal() {
+	std::string results = "";
+	int number = baseNumber;
+
+	while (number > 0) {
+		int mod = number % 16;
+		if (mod < 10) {
+			results = std::to_string(mod) + results;
+		}
+		else {
+			switch (mod)
+			{
+			case 10:
+				results = "A" + results;
+				break;
+			case 11:
+				results = "B" + results;
+				break;
+			case 12:
+				results = "C" + results;
+				break;
+			case 13:
+				results = "D" + results;
+				break;
+			case 14:
+				results = "E" + results;
+				break;
+			case 15:
+				results = "F" + results;
+				break;
+			default:
+				break;
+			}
+		}
+		number = number / 16;
+	}
+	results = "0x" + results;
+	return results;
+}
