@@ -71,3 +71,8 @@ std::string CalculatorProcessor::GetHexadecimal() {
 	results = "0x" + results;
 	return results;
 }
+
+std::string CalculatorProcessor::GetAddition(int addNum) {
+	std::string results = std::to_string(baseNumber + addNum);
+	return results;
+}
