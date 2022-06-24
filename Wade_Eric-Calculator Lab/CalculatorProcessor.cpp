@@ -77,11 +77,11 @@ void CalculatorProcessor::GetAddition(int addNum) {
 	AddCommand add = new AddCommand(baseNumber, addNum);
 	commands.push_back(add);
 }
-/*
-std::string CalculatorProcessor::GetSubtraction(int subNum) {
-	std::string results = std::to_string(baseNumber - subNum);
-	return results;
-}*/
+
+void CalculatorProcessor::GetSubtraction(int subNum) {
+	SubtractCommand sub = new SubtractCommand(baseNumber, subNum);
+	commands.push_back(sub);
+}
 /*
 std::string CalculatorProcessor::GetMultiplication(int multNum) {
 	std::string results = std::to_string(baseNumber * multNum);
