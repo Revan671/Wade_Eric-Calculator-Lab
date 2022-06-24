@@ -27,8 +27,8 @@ public:
 	std::string GetBinary();
 	void GetAddition(int addNum);
 	void GetSubtraction(int subNum);
-	//std::string GetMultiplication(int multNum);
-	//std::string GetDivision(int divNum);
+	void GetMultiplication(int multNum);
+	void GetDivision(int divNum);
 	std::string GetModulus(int modNum);
 
 };

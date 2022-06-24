@@ -82,16 +82,16 @@ void CalculatorProcessor::GetSubtraction(int subNum) {
 	SubtractCommand sub = new SubtractCommand(baseNumber, subNum);
 	commands.push_back(sub);
 }
-/*
-std::string CalculatorProcessor::GetMultiplication(int multNum) {
-	std::string results = std::to_string(baseNumber * multNum);
-	return results;
-}*/
-/*
-std::string CalculatorProcessor::GetDivision(int divNum) {
-	std::string results = std::to_string(baseNumber / divNum);
-	return results;
-}*/
+
+void CalculatorProcessor::GetMultiplication(int multNum) {
+	MultiplyCommand mult = new MultiplyCommand(baseNumber, multNum);
+	commands.push_back(mult);
+}
+
+void CalculatorProcessor::GetDivision(int divNum) {
+	DivideCommand div = new DivideCommand(baseNumber, divNum);
+	commands.push_back(div);
+}
 
 std::string CalculatorProcessor::GetModulus(int modNum) {
 	std::string results = std::to_string(baseNumber % modNum);
