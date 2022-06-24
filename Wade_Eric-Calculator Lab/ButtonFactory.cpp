@@ -49,7 +49,8 @@ wxButton* ButtonFactory::CreateMODButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateBINButton(wxWindow* frame) {
-
+	wxButton* binButton = new wxButton(frame, 117, "BIN", wxPoint(290, 230), wxSize(70, 50));
+	return binButton;
 }
 
 wxButton* ButtonFactory::CreateHEXButton(wxWindow* frame) {
