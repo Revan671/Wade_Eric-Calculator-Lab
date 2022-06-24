@@ -76,11 +76,11 @@ std::string CalculatorProcessor::GetAddition(int addNum) {
 	std::string results = std::to_string(baseNumber + addNum);
 	return results;
 }*/
-
+/*
 std::string CalculatorProcessor::GetSubtraction(int subNum) {
 	std::string results = std::to_string(baseNumber - subNum);
 	return results;
-}
+}*/
 
 std::string CalculatorProcessor::GetMultiplication(int multNum) {
 	std::string results = std::to_string(baseNumber * multNum);

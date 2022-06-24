@@ -21,7 +21,7 @@ public:
 	std::string GetHexadecimal();
 	std::string GetBinary();
 	//std::string GetAddition(int addNum);
-	std::string GetSubtraction(int subNum);
+	//std::string GetSubtraction(int subNum);
 	std::string GetMultiplication(int multNum);
 	std::string GetDivision(int divNum);
 	std::string GetModulus(int modNum);
