@@ -36,6 +36,9 @@
     <ClInclude Include="SubtractCommand.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MultiplyCommand.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cApp.cpp">
@@ -57,6 +60,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SubtractCommand.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiplyCommand.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

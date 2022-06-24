@@ -25,6 +25,7 @@
     <ClInclude Include="cApp.h" />
     <ClInclude Include="cWindow.h" />
     <ClInclude Include="IBaseCommand.h" />
+    <ClInclude Include="MultiplyCommand.h" />
     <ClInclude Include="SubtractCommand.h" />
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +35,7 @@
     <ClCompile Include="cApp.cpp" />
     <ClCompile Include="cWindow.cpp" />
     <ClCompile Include="IBaseCommand.cpp" />
+    <ClCompile Include="MultiplyCommand.cpp" />
     <ClCompile Include="SubtractCommand.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
