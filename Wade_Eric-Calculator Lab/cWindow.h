@@ -38,4 +38,3 @@ private:
 	wxTextCtrl* inputBox;
 
 };
-
