@@ -86,3 +86,8 @@ std::string CalculatorProcessor::GetMultiplication(int multNum) {
 	std::string results = std::to_string(baseNumber * multNum);
 	return results;
 }
+
+std::string CalculatorProcessor::GetDivision(int divNum) {
+	std::string results = std::to_string(baseNumber / divNum);
+	return results;
+}
