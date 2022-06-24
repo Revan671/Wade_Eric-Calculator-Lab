@@ -91,3 +91,8 @@ std::string CalculatorProcessor::GetDivision(int divNum) {
 	std::string results = std::to_string(baseNumber / divNum);
 	return results;
 }
+
+std::string CalculatorProcessor::GetModulus(int modNum) {
+	std::string results = std::to_string(baseNumber % modNum);
+	return results;
+}
