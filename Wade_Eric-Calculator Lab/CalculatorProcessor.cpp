@@ -1,5 +1,6 @@
 #include "CalculatorProcessor.h"
 
+
 CalculatorProcessor* CalculatorProcessor::GetInstance() {
 	if (_processor == nullptr) {
 		_processor = new CalculatorProcessor();
@@ -72,24 +73,24 @@ std::string CalculatorProcessor::GetHexadecimal() {
 	return results;
 }
 
-std::string CalculatorProcessor::GetAddition(int addNum) {
-	std::string results = std::to_string(baseNumber + addNum);
-	return results;
+void CalculatorProcessor::GetAddition(int addNum) {
+	AddCommand add = new AddCommand(baseNumber, addNum);
+	commands.push_back(add);
 }
 
-std::string CalculatorProcessor::GetSubtraction(int subNum) {
-	std::string results = std::to_string(baseNumber - subNum);
-	return results;
+void CalculatorProcessor::GetSubtraction(int subNum) {
+	SubtractCommand sub = new SubtractCommand(baseNumber, subNum);
+	commands.push_back(sub);
 }
 
-std::string CalculatorProcessor::GetMultiplication(int multNum) {
-	std::string results = std::to_string(baseNumber * multNum);
-	return results;
+void CalculatorProcessor::GetMultiplication(int multNum) {
+	MultiplyCommand mult = new MultiplyCommand(baseNumber, multNum);
+	commands.push_back(mult);
 }
 
-std::string CalculatorProcessor::GetDivision(int divNum) {
-	std::string results = std::to_string(baseNumber / divNum);
-	return results;
+void CalculatorProcessor::GetDivision(int divNum) {
+	DivideCommand div = new DivideCommand(baseNumber, divNum);
+	commands.push_back(div);
 }
 
 std::string CalculatorProcessor::GetModulus(int modNum) {
