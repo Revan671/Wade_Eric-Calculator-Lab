@@ -25,6 +25,7 @@
     <ClInclude Include="cApp.h" />
     <ClInclude Include="cWindow.h" />
     <ClInclude Include="IBaseCommand.h" />
+    <ClInclude Include="SubtractCommand.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AddCommand.cpp" />
@@ -33,6 +34,7 @@
     <ClCompile Include="cApp.cpp" />
     <ClCompile Include="cWindow.cpp" />
     <ClCompile Include="IBaseCommand.cpp" />
+    <ClCompile Include="SubtractCommand.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
