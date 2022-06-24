@@ -41,7 +41,7 @@ cWindow::cWindow() : wxFrame(nullptr, wxID_ANY, "Calculator", wxPoint(400, 200),
 	button18 = Factory->CreateHEXButton(this);
 	button14 = Factory->CreateEqualsButton(this);
 	button15 = Factory->CreateClearButton(this);
-	button21 = new wxButton(this, 121, "DEL", wxPoint(80, 80), wxSize(70, 50));
+	button21 = Factory->CreateDeleteButton(this);
 	//textboxes
 	inputBox = new wxTextCtrl(this, 122, "", wxPoint(150, 80), wxSize(210, 50));
 	outputBox = new wxTextCtrl(this, 123, "", wxPoint(10, 10), wxSize(350, 70));

@@ -69,5 +69,6 @@ wxButton* ButtonFactory::CreateSignButton(wxWindow* frame) {
 }
 
 wxButton* ButtonFactory::CreateDeleteButton(wxWindow* frame) {
-
+	wxButton* deleteButton = new wxButton(frame, 121, "DEL", wxPoint(80, 80), wxSize(70, 50));
+	return deleteButton;
 }
