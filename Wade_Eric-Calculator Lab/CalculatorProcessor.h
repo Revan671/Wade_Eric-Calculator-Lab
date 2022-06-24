@@ -20,7 +20,7 @@ public:
 	std::string GetDecimal();
 	std::string GetHexadecimal();
 	std::string GetBinary();
-	std::string GetAddition(int addNum);
+	//std::string GetAddition(int addNum);
 	std::string GetSubtraction(int subNum);
 	std::string GetMultiplication(int multNum);
 	std::string GetDivision(int divNum);
