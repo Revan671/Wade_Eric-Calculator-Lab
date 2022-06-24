@@ -1,13 +1,15 @@
 #pragma once
 #include <string>
+#include <vector>
+#include "IBaseCommand.h"
 
-
-class CalculatorProcessor
+class CalculatorProcessor : public IBaseCommand
 {
 private:
 	CalculatorProcessor() {}
 	static CalculatorProcessor* _processor;
 	int baseNumber;
+	std::vector<IBaseCommand> commands;
 public:
 	static CalculatorProcessor* GetInstance();
 	void SetBaseNumber(int number);
@@ -23,6 +25,7 @@ public:
 	std::string GetMultiplication(int multNum);
 	std::string GetDivision(int divNum);
 	std::string GetModulus(int modNum);
+	void Execute();
 };
 
 CalculatorProcessor* CalculatorProcessor::_processor = nullptr;

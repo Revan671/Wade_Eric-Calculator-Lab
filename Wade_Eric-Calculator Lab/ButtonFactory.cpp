@@ -73,3 +73,5 @@ wxButton* ButtonFactory::CreateDeleteButton(wxWindow* frame) {
 	return deleteButton;
 }
 
+
+
