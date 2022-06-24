@@ -22,6 +22,7 @@ public:
 	std::string GetSubtraction(int subNum);
 	std::string GetMultiplication(int multNum);
 	std::string GetDivision(int divNum);
+	std::string GetModulus(int modNum);
 };
 
 CalculatorProcessor* CalculatorProcessor::_processor = nullptr;
